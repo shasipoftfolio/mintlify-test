@@ -3,6 +3,8 @@ title: "Inventory Management - v2.0"
 description: "AI-powered inventory tracking with IoT sensors and predictive analytics"
 ---
 
+import { Card, CardGroup, Steps, Step, Note, Tip, CodeGroup, Tabs, Tab, Accordion, AccordionGroup, Badge, Info } from 'mintlify/components'
+
 # Inventory Management - v2.0
 
 Track salsa ingredients with AI-powered predictions and real-time IoT sensor monitoring.
@@ -11,16 +13,28 @@ Track salsa ingredients with AI-powered predictions and real-time IoT sensor mon
 
 Our v2.0 inventory management system uses artificial intelligence and IoT sensors to provide intelligent tracking, predictive ordering, and automated waste prevention.
 
+---
+
 ## Key Features
 
 ### AI-Powered Tracking
 
 Monitor your ingredient levels with intelligent predictions:
 
-- **Predictive stock levels**: AI forecasts when you'll run out
-- **Automated reordering**: Smart ordering based on usage patterns
-- **Usage predictions**: Machine learning predicts ingredient needs
-- **Anomaly detection**: AI identifies unusual consumption patterns
+<CardGroup cols={2}>
+  <Card title="Predictive Stock Levels" icon="brain">
+    AI forecasts when you'll run out
+  </Card>
+  <Card title="Automated Reordering" icon="rotate">
+    Smart ordering based on usage patterns
+  </Card>
+  <Card title="Usage Predictions" icon="chart-line">
+    Machine learning predicts ingredient needs
+  </Card>
+  <Card title="Anomaly Detection" icon="triangle-exclamation">
+    AI identifies unusual consumption patterns
+  </Card>
+</CardGroup>
 
 ```javascript
 // Example: Get AI inventory predictions
@@ -32,23 +46,49 @@ const predictions = await salsa.ai.inventory.predict({
 console.log(`Predicted reorder date: ${predictions.reorder_date}`);
 ```
 
+---
+
 ### IoT Sensor Integration
 
 Real-time monitoring with connected sensors:
 
-- **RFID tracking**: Automatic ingredient scanning
-- **Temperature sensors**: Monitor refrigeration conditions
-- **Weight sensors**: Real-time stock level tracking
-- **Freshness sensors**: Chemical sensors detect spoilage
+<CardGroup cols={2}>
+  <Card title="RFID Tracking" icon="wifi">
+    Automatic ingredient scanning
+  </Card>
+  <Card title="Temperature Sensors" icon="thermometer">
+    Monitor refrigeration conditions
+  </Card>
+  <Card title="Weight Sensors" icon="weight-scale">
+    Real-time stock level tracking
+  </Card>
+  <Card title="Freshness Sensors" icon="flask">
+    Chemical sensors detect spoilage
+  </Card>
+</CardGroup>
+
+---
 
 ### Smart Waste Prevention
 
 AI-driven waste reduction:
 
-- Predicts optimal order quantities
-- Suggests recipes to use near-expiry ingredients
-- Identifies waste patterns and root causes
-- Reduces waste by up to 60% compared to v1.0
+<CardGroup cols={2}>
+  <Card title="Optimal Order Quantities" icon="box">
+    Predicts optimal order quantities
+  </Card>
+  <Card title="Near-Expiry Recipes" icon="utensils">
+    Suggests recipes to use near-expiry ingredients
+  </Card>
+  <Card title="Waste Pattern Analysis" icon="magnifying-glass-chart">
+    Identifies waste patterns and root causes
+  </Card>
+  <Card title="60% Waste Reduction" icon="leaf">
+    Reduces waste by up to 60% compared to v1.0
+  </Card>
+</CardGroup>
+
+---
 
 ## Stock Management
 
@@ -56,32 +96,68 @@ AI-driven waste reduction:
 
 Intelligent alerts that learn from your patterns:
 
-- Predictive alerts before you run out
-- Seasonal adjustment recommendations
-- Event-based usage predictions
-- Supplier lead time optimization
+<CardGroup cols={2}>
+  <Card title="Predictive Alerts" icon="bell">
+    Predictive alerts before you run out
+  </Card>
+  <Card title="Seasonal Adjustments" icon="sun">
+    Seasonal adjustment recommendations
+  </Card>
+  <Card title="Event-Based Predictions" icon="calendar">
+    Event-based usage predictions
+  </Card>
+  <Card title="Lead Time Optimization" icon="truck">
+    Supplier lead time optimization
+  </Card>
+</CardGroup>
 
-> **Note:**
-**New in v2.0**: AI learns your usage patterns and automatically adjusts alert thresholds based on historical data and upcoming events.
+<Note>
+  **New in v2.0**: AI learns your usage patterns and automatically adjusts alert thresholds based on historical data and upcoming events.
+</Note>
 
+---
 
 ### Automated Supplier Integration
 
 Seamless ordering with AI optimization:
 
-- Automatic purchase order generation
-- Price comparison across suppliers
-- Quality-based supplier recommendations
-- Delivery schedule optimization
+<CardGroup cols={2}>
+  <Card title="Auto Purchase Orders" icon="file-invoice">
+    Automatic purchase order generation
+  </Card>
+  <Card title="Price Comparison" icon="scale-balanced">
+    Price comparison across suppliers
+  </Card>
+  <Card title="Quality Recommendations" icon="star">
+    Quality-based supplier recommendations
+  </Card>
+  <Card title="Delivery Optimization" icon="calendar-check">
+    Delivery schedule optimization
+  </Card>
+</CardGroup>
+
+---
 
 ## IoT Dashboard
 
 Real-time sensor monitoring:
 
-- Live temperature readings
-- RFID location tracking
-- Weight-based inventory levels
-- Freshness indicators
+<CardGroup cols={2}>
+  <Card title="Temperature" icon="thermometer">
+    Live temperature readings
+  </Card>
+  <Card title="RFID Location" icon="location-dot">
+    RFID location tracking
+  </Card>
+  <Card title="Inventory Levels" icon="weight-scale">
+    Weight-based inventory levels
+  </Card>
+  <Card title="Freshness Indicators" icon="seedling">
+    Freshness indicators
+  </Card>
+</CardGroup>
+
+---
 
 ## AI Insights
 
@@ -89,10 +165,22 @@ Real-time sensor monitoring:
 
 AI identifies trends and patterns:
 
-- Peak usage times by day/season
-- Recipe popularity trends
-- Waste hotspots
-- Cost optimization opportunities
+<CardGroup cols={2}>
+  <Card title="Peak Usage Times" icon="clock">
+    Peak usage times by day/season
+  </Card>
+  <Card title="Recipe Popularity" icon="chart-bar">
+    Recipe popularity trends
+  </Card>
+  <Card title="Waste Hotspots" icon="fire">
+    Waste hotspots
+  </Card>
+  <Card title="Cost Optimization" icon="dollar-sign">
+    Cost optimization opportunities
+  </Card>
+</CardGroup>
+
+---
 
 ### Predictive Ordering
 
@@ -108,19 +196,21 @@ const autoOrder = await salsa.ai.inventory.enableAutoOrder({
 });
 ```
 
+---
+
 ## Getting Started
 
-
-1. **Connect IoT Sensors**
-   Install RFID tags and temperature sensors in your storage areas.
-
-2. **Enable AI Features**
-   Activate AI predictions and import 90 days of historical data.
-
-3. **Configure Auto-Ordering**
-   Set up automated ordering rules and supplier preferences.
-
-4. **Monitor & Optimize**
-   Let AI learn from your patterns and optimize over time.
-
-
+<Steps>
+  <Step title="Connect IoT Sensors">
+    Install RFID tags and temperature sensors in your storage areas.
+  </Step>
+  <Step title="Enable AI Features">
+    Activate AI predictions and import 90 days of historical data.
+  </Step>
+  <Step title="Configure Auto-Ordering">
+    Set up automated ordering rules and supplier preferences.
+  </Step>
+  <Step title="Monitor & Optimize">
+    Let AI learn from your patterns and optimize over time.
+  </Step>
+</Steps>
